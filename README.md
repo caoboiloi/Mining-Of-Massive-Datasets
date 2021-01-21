@@ -20,6 +20,42 @@ Có thể tiến hành chạy song song trên các máy phân tán 1 cách chín
 
 Có thể thực hiên mô hình Mapreduce trên nhiều ngôn ngữ (Java,C++,Python,Perl,Ruby,C) với các thư viện tương ứng.
 
+### Nguyên tắc hoạt động MapReduce:
+
+Mapreduce hoạt dộng gồm 2 quá trình thực hiện 2 hàm "Map" và "Reduce".
+
+Ý tưởng chính của Mapreduce chính là thực hiện việc "Chia để trị":
+
+* Chia vấn đề cần xử lý (dữ liệu) thành các phàn nhỏ để xử lý.
+
+* Xử lý các vấn đề nhỏ đó 1 cách song song trên các máy tính phân tán hoạt động đọc lập.
+
+* Tông hợp các kết quả thu được để đưa ra kết quả cuối cùng.
+
+Như vậy toàn bộ quá trình mapreduce có thể hiểu như sau:
+
+* Đọc dữ liệu đầu vào.
+
+* Thực hiên xử lý các phần dữ liệu vào (xử lý từng phấn một ) (Thực hiện hàm Map).
+
+* Trộn và sắp xếp các kết quả thu được từ các máy tính làm sao để được kết quả tiện lợi nhất so với mục đích của quá trình.
+
+* Tổng hợp các kết quả trung gian thu được từ các máy tính phân tán (Thực hiện hàm reduce).
+
+* Đưa ra kết quả cuối cùng.
+
+Sơ đồ hoạt động của quá trình Mapreduce:
+
+![MapReduce](https://blog.itnavi.com.vn/wp-content/uploads/2020/06/Mapreduce-l%C3%A0-g%C3%AC-2.jpg)
+
+### Mô hình MapReduce:
+
+MapReduce có 2 hàm chính là Map() và Reduce(), đây là 2 hàm đã được định nghĩa bởi người dùng và nó cũng chính là 2 giai đoạn liên tiếp trong quá trình xử lý dữ liệu của MapReduce. Nhiệm vụ cụ thể của từng hàm như sau:
+
+* **Map()**: có nhiệm vụ nhận Input cho các cặp giá trị/  khóa và output chính là tập những cặp giá trị/khóa trung gian. Sau đó, chỉ cần ghi xuống đĩa cứng và tiến hành thông báo cho các hàm Reduce() để trực tiếp nhận dữ liệu.
+
+* **Reduce()**: có nhiệm vụ tiếp nhận từ khóa trung gian và những giá trị tương ứng với lượng từ khóa đó. Sau đó, tiến hành ghép chúng lại để có thể tạo thành một tập khóa khác nhau. Các cặp khóa/giá trị này thường sẽ thông qua một con trỏ vị trí để đưa vào các hàm reduce. Quá trình này sẽ giúp cho lập trình viên quản lý dễ dàng hơn một lượng danh sách cũng như  phân bổ giá trị sao cho  phù hợp nhất với bộ nhớ hệ thống.
+
 # Tổng quan về Apache Spark
 
 ![Apache Spark](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.0-9/92210827_2562659827300256_1174788299802279936_n.jpg?_nc_cat=102&ccb=2&_nc_sid=74df0b&_nc_ohc=kifyepT5UTgAX8nyvFX&_nc_ht=scontent.fsgn2-5.fna&oh=0a8e3ce705a1df978f105c6d00ddb978&oe=602D6251)
