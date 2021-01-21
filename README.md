@@ -1,5 +1,11 @@
 <div align="justify">
 
+# Tổng quan về MapReduce
+
+### MapReduce là gì ?
+
+![MapReduce](https://blog.itnavi.com.vn/wp-content/uploads/2020/06/Mapreduce-l%C3%A0-g%C3%AC-1.jpg)
+
 # Tổng quan về Apache Spark
 
 ![Apache Spark](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Apache_Spark_logo.svg/1200px-Apache_Spark_logo.svg.png)
