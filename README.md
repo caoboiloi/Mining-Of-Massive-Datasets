@@ -8,7 +8,7 @@
 
 # Tổng quan về Apache Spark
 
-![Apache Spark](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Apache_Spark_logo.svg/1200px-Apache_Spark_logo.svg.png)
+![Apache Spark](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.0-9/92210827_2562659827300256_1174788299802279936_n.jpg?_nc_cat=102&ccb=2&_nc_sid=74df0b&_nc_ohc=kifyepT5UTgAX8nyvFX&_nc_ht=scontent.fsgn2-5.fna&oh=0a8e3ce705a1df978f105c6d00ddb978&oe=602D6251)
 
 Ngày nay có rất nhiều hệ thống xử lý dữ liệu thông tin đang sử dụng Hadoop rộng rãi để phân tích dữ liệu lớn. Ưu điểm lớn nhất của Hadoop là được dựa trên một mô hình lập trình song song với xử lý dữ liệu lớn là MapReduce, mô hình này cho phép khả năng tính toán có thể mở rộng, linh hoạt, khả năng chịu lỗi, chi phí rẻ. Điều này cho phép tăng tốc thời gian xử lý các dữ liệu lớn nhằm duy trì tốc độ, giảm thời gian chờ đợi khi dữ liệu ngày càng lớn.
 
@@ -75,6 +75,8 @@ joining Dataset
 Machine Learning
 
 Apache Spark là Framework thực thi dữ liệu dựa trên Hadoop HDFS. Apache Spark không thay thế cho Hadoop nhưng nó là một framework ứng dụng. Apache Spark tuy ra đời sau nhưng được nhiều người biết đến hơn Apache Hadoop vì khả năng xử lý hàng loạt và thời gian thực.
+
+
 
 </div>
 
