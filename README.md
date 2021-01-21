@@ -54,7 +54,21 @@ Apache Spark gồm có 5 thành phần chính : Spark Core, Spark Streaming, Spa
 
 Tính năng và cũng là ưu điểm của Spark:
 
+* **Advanced Analytics**: Spark không chỉ hỗ trợ "Map" và "Reduce ", nó còn hỗ trợ Spark truy vấn SQL, Streaming data, Machine learning (ML) và các thuật toán xử lý đồ thị đóng vai trò như một bộ công cụ phân tích dữ liệu cực kì mạnh mẽ.
 
+* **Speed**: Spark giúp chạy một ứng dụng với tốc độ rất nhanh. So với Hadoop cluster, Spark Application nến chạy trên bộ nhớ nhanh hơn tới 100 lần và nhanh hơn 10 lần khi chạy trên đĩa. Điều này có được nhờ giảm số lượng các hoạt động đọc / ghi vào ổ đĩa.
+
+* **Supports multiple languages**: Spark cung cấp built-in APIs phổ biến từ Java, Scala đến Python, R. Do đó, có thể code Spark applications với nhiều lựa chọn về ngôn ngữ lập trình. Bên cạnh đó Spark còn cung cấp rất nhiều high-level operators cho việc truy vấn dữ liệu...
+
+Nhược điểm:
+
+* Spark không có hệ thống Filesystem riêng, do đó, nó phụ thuộc vào một số nền tảng khác như Hadoop hoặc một nền tảng dựa trên đám mây (S3, Google Cloud Storage,...).
+
+* Apache Spark đòi hỏi rất nhiều RAM để chạy trong bộ nhớ, do đó chi phí của Spark khá cao.
+
+* Spark Streaming không thực sự real-time.
+
+* Việc tối ưu hóa, tinh chỉnh để phù hợp với các bộ dữ liệu cụ thể cần có kinh nghiệm và vẫn cần thực hiện thủ công.
 
 ### Mục tiêu sử dụng:
 
@@ -72,7 +86,11 @@ Machine Learning
 
 Apache Spark là Framework thực thi dữ liệu dựa trên Hadoop HDFS. Apache Spark không thay thế cho Hadoop nhưng nó là một framework ứng dụng. Apache Spark tuy ra đời sau nhưng được nhiều người biết đến hơn Apache Hadoop vì khả năng xử lý hàng loạt và thời gian thực.
 
+### Spark tại các công ty công nghệ lớn trên thế giới:
 
+**Ebay**: eBay sử dụng Apache Spark để cung cấp các ưu đãi được nhắm mục tiêu, nâng cao trải nghiệm của khách hàng và để tối ưu hóa hiệu suất tổng thể. Apache Spark được tận dụng tại eBay thông qua Hadoop YARN.
+
+**Alibaba**: Alibaba một trong những nền tảng thương mại điện tử lớn nhất thế giới, sử Apache Spark để phân tích hàng trăm petabyte dữ liệu trên nền tảng thương mại điện tử của mình. Một số công việc Spark thực hiện trích xuất tính năng trên dữ liệu hình ảnh, chạy trong vài tuần. Hàng triệu thương nhân và người dùng tương tác với nền tảng thương mại điện tử Alibaba Taobao. Mỗi tương tác này được biểu diễn dưới dạng một biểu đồ lớn phức tạp và Spark được sử dụng để xử lý nhanh quá trình bằng các thuật toán ML tinh vi trên dữ liệu này.
 
 </div>
 
