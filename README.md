@@ -10,7 +10,15 @@ Mapreduce có thể hiểu là 1 phương thức thực thi để giúp các ứ
 
 Một đặc điểm đáng chú ý của Mapreduce là dữ liệu đầu vào có thể là dữ liệu có cấu trúc (dữ liệu lưu trữ dạng bảng quan hệ 2 chiều) hoặc dữ liệu không cấu trúc (dữ liệu dạng tập tin hệ thống).
 
-Các máy tính lưu trữ các dữ liệu phân tán trong quá trình thực thi được gọi là các nút (nodes) của hệ thống.Nếu các máy tính này cùng sử dụng chung trên 1 phần cứng thì chúng được gọi là 1 cụm (Cluster).Nếu các máy này hoatj động riêng rẽ trên các phần cứng khác nhau thì chúng được gọi là 1 lưới (Grid).
+Các máy tính lưu trữ các dữ liệu phân tán trong quá trình thực thi được gọi là các nút (nodes) của hệ thống. Nếu các máy tính này cùng sử dụng chung trên 1 phần cứng thì chúng được gọi là 1 cụm (Cluster). Nếu các máy này hoatj động riêng rẽ trên các phần cứng khác nhau thì chúng được gọi là 1 lưới (Grid).
+
+### Ưu điểm MapReduce:
+
+Xử lý tốt bài toán về lượng dữ liệu lớn có các tác vụ phân tích và tính toán phức tạp không lường trước được.
+
+Có thể tiến hành chạy song song trên các máy phân tán 1 cách chính xác và hiệu quả. Không phải quan tâm đến sự trao đổi dữ liệu giữa các clusters với nhau vì chúng hoạt động 1 cách đọc lập, không phải theo dõi xử lý các tác vụ, xử lý lỗi.
+
+Có thể thực hiên mô hình Mapreduce trên nhiều ngôn ngữ (Java,C++,Python,Perl,Ruby,C) với các thư viện tương ứng.
 
 # Tổng quan về Apache Spark
 
