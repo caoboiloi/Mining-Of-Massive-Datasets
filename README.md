@@ -1,3 +1,4 @@
+<div align="justify">
 # Tổng quan về Apache Spark
 
 ![Apache Spark](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Apache_Spark_logo.svg/1200px-Apache_Spark_logo.svg.png)
@@ -10,7 +11,6 @@ https://laptrinh.vn/link/92#bkmrk-%C4%90%E1%BB%83-kh%E1%BA%AFc-ph%E1%BB%A5c-%C4%
  
 Để khắc phục được nhược điểm này thì Apache Spark được ra đời. Apache Spark có thể chạy nhanh hơn 10 lần so với Haddop ở trên đĩa cứng và 100 lần khi chạy trên bộ nhớ RAM, hình dưới biểu thị thời gian chạy của tính toán hồi quy Logistic trên Haddop và Spark.
 
-<div align="justify">
 ### Apache Spark là gì ?
 
 Apache Spark *(gọi tắt là Spark)* là một framework mã nguồn mở tính toán cụm, được phát triển sơ khởi vào năm 2009 bởi AMPLab. Sau này, Spark đã được trao cho Apache Software Foundation vào năm 2013 và được phát triển cho đến nay.
