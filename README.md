@@ -92,5 +92,21 @@ Apache Spark là Framework thực thi dữ liệu dựa trên Hadoop HDFS. Apach
 
 **Alibaba**: Alibaba một trong những nền tảng thương mại điện tử lớn nhất thế giới, sử Apache Spark để phân tích hàng trăm petabyte dữ liệu trên nền tảng thương mại điện tử của mình. Một số công việc Spark thực hiện trích xuất tính năng trên dữ liệu hình ảnh, chạy trong vài tuần. Hàng triệu thương nhân và người dùng tương tác với nền tảng thương mại điện tử Alibaba Taobao. Mỗi tương tác này được biểu diễn dưới dạng một biểu đồ lớn phức tạp và Spark được sử dụng để xử lý nhanh quá trình bằng các thuật toán ML tinh vi trên dữ liệu này.
 
+Những use case tiêu biểu khác có thể liệt kê như các công ty công nghệ như Uber và Netflix sử dụng các công cụ Spark Streaming và MLlib, đến các tổ chức như NASA, CERN và Broad Institute of MIT và Harvard áp dụng Spark vào phân tích dữ liệu khoa học.
+
+### Spark Application
+
+![Apache Spark](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.0-9/92953707_2568473546718884_2605275033735528448_n.jpg?_nc_cat=104&ccb=2&_nc_sid=32a93c&_nc_ohc=FL4Hd7NjXMsAX-8QhC4&_nc_ht=scontent.fsgn2-5.fna&oh=dc016f6fc5a6084be7533152573d8e76&oe=602D87BB)
+
+Một ứng dụng Spark sẽ gồm 2 thành phần chính:
+
+* **Driver Program**: Là 1 JVM Process, chứa hàm main() như bất kì 1 chương trình JVM nào khác, nó đóng vai trò điều phối code/ logic xử lý trên driver. Driver program chứa Spark Session.
+
+* **Executor**: Là các worker, chịu trách nhiệm thực hiện các tính toán các logic nhận từ Driver. Dữ liệu cần xử lý có thể được load trực tiếp vào memory của Executor.
+
+**Spark session**: Đại diện cho khả năng tương tác với executors trong 1 chương trình. Spark session chính là entry point của mọi chương trình Spark. Từ SparkSession, có thể tạo RDD/ DataFrame/ DataSet, thực thi SQL… từ đó thực thi tính toán phân tán.
+
+Khi chạy, từ logic của chương trình (chính là code xử lý thông qua việc gọi các API), Driver sẽ sinh ra các task tương ứng và lên lịch chạy các task, sau đó gửi xuống Executor để thực thi. Dữ liệu được lưu trên memory của Executor nên việc thực thi tính toán sẽ nhanh hơn rất nhiều.
+
 </div>
 
