@@ -56,7 +56,23 @@ MapReduce có 2 hàm chính là Map() và Reduce(), đây là 2 hàm đã đư�
 
 * **Reduce()**: có nhiệm vụ tiếp nhận từ khóa trung gian và những giá trị tương ứng với lượng từ khóa đó. Sau đó, tiến hành ghép chúng lại để có thể tạo thành một tập khóa khác nhau. Các cặp khóa/giá trị này thường sẽ thông qua một con trỏ vị trí để đưa vào các hàm reduce. Quá trình này sẽ giúp cho lập trình viên quản lý dễ dàng hơn một lượng danh sách cũng như  phân bổ giá trị sao cho  phù hợp nhất với bộ nhớ hệ thống.
 
-Ở giữa Map và Reduce thì còn 1 bước trung gian đó chính là Shuffle. Sau khi Map hoàn thành  xong công việc của mình thì Shuffle sẽ làm nhiệm vụ chính là thu thập cũng như tổng hợp từ khóa/giá trị trung gian đã được map sinh ra trước đó rồi chuyển qua cho Reduce tiếp tục xử lý.
+Ở giữa Map và Reduce thì còn 1 bước trung gian đó chính là Shuffle. Sau khi Map hoàn thành xong công việc của mình thì Shuffle sẽ làm nhiệm vụ chính là thu thập cũng như tổng hợp từ khóa/giá trị trung gian đã được map sinh ra trước đó rồi chuyển qua cho Reduce tiếp tục xử lý.
+
+#### Ví dụ quá trình thực hiện mapreduce với bài toán "WordCount":
+
+![MapReduce](https://blog.itnavi.com.vn/wp-content/uploads/2020/06/Mapreduce-l%C3%A0-g%C3%AC-3.jpg)
+
+Hàm Map:
+
+* Input: 1 dòng văn bản.
+
+* Output: Danh sách các cặp <key,value> ứng với từng chữ trong dòng văn bản đó.Trong đó "key" là chữ ,value=1.
+
+Hàm Reduce:
+
+* Input: danh sách các cặp key, giá trị đếm được của mối từ.
+
+* Output: key=từ trong cả đoạn,value=số lượng từ tương ứng trong đoạn.
 
 # Tổng quan về Apache Spark
 
