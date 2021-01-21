@@ -52,7 +52,7 @@ Apache Spark gồm có 5 thành phần chính : Spark Core, Spark Streaming, Spa
 
 ![Apache Spark](https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.0-9/92670619_2562655537300685_174298646274113536_n.jpg?_nc_cat=101&ccb=2&_nc_sid=32a93c&_nc_ohc=SPI9-fWp_PUAX-iq0BD&_nc_ht=scontent.fsgn2-4.fna&oh=ffd2b66a7fec1e8c85ea7e7b503fb57d&oe=602D8444)
 
-Tính năng và cũng là ưu điểm của Spark:
+*Tính năng và cũng là ưu điểm của Spark:*
 
 * **Advanced Analytics**: Spark không chỉ hỗ trợ "Map" và "Reduce ", nó còn hỗ trợ Spark truy vấn SQL, Streaming data, Machine learning (ML) và các thuật toán xử lý đồ thị đóng vai trò như một bộ công cụ phân tích dữ liệu cực kì mạnh mẽ.
 
@@ -60,7 +60,7 @@ Tính năng và cũng là ưu điểm của Spark:
 
 * **Supports multiple languages**: Spark cung cấp built-in APIs phổ biến từ Java, Scala đến Python, R. Do đó, có thể code Spark applications với nhiều lựa chọn về ngôn ngữ lập trình. Bên cạnh đó Spark còn cung cấp rất nhiều high-level operators cho việc truy vấn dữ liệu...
 
-Nhược điểm:
+*Nhược điểm:*
 
 * Spark không có hệ thống Filesystem riêng, do đó, nó phụ thuộc vào một số nền tảng khác như Hadoop hoặc một nền tảng dựa trên đám mây (S3, Google Cloud Storage,...).
 
