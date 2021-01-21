@@ -108,5 +108,13 @@ Một ứng dụng Spark sẽ gồm 2 thành phần chính:
 
 Khi chạy, từ logic của chương trình (chính là code xử lý thông qua việc gọi các API), Driver sẽ sinh ra các task tương ứng và lên lịch chạy các task, sau đó gửi xuống Executor để thực thi. Dữ liệu được lưu trên memory của Executor nên việc thực thi tính toán sẽ nhanh hơn rất nhiều.
 
+### RDD (Resilient Distributed Dataset):
+
+![RDD](https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/93049505_2568474116718827_523214101409693696_n.jpg?_nc_cat=103&ccb=2&_nc_sid=32a93c&_nc_ohc=R-yQ0NKgKpsAX8968KB&_nc_oc=AQmePbQQQgLBF_wFuVRVJQ5znGotCRa8OMC3xNSPpvosJ2sqowUYVzxCvj0oi4OFnkQ&_nc_ht=scontent.fsgn2-2.fna&oh=a937b6407524587cde9f225cc20cd666&oe=602D67D4)
+
+Trong 1 chương trình Spark, RDD là đại diện cho tập dữ liệu phân tán.
+
+Đặc điểm quan trọng của 1 RDD là số partitions. Một RDD bao gồm nhiều partition nhỏ, mỗi partition này đại diện cho 1 phần dữ liệu phân tán. Khái niệm partition là logical, tức là 1 node xử lý có thể chứa nhiều hơn 1 RDD partition. Theo mặc định, dữ liệu các partitions sẽ lưu trên memory. Thử tưởng tượng bạn cần xử lý 1TB dữ liệu, nếu lưu hết trên mem tính ra thì cung khá tốn kém nhỉ. Tất nhiên nếu bạn có 1TB ram để xử lý thì tốt quá nhưng điều đó không cần thiết. Với việc chia nhỏ dữ liệu thành các partition và cơ chế lazy evaluation của Spark bạn có thể chỉ cần vài chục GB ram và 1 chương trình được thiết kế tốt để xử lý 1TB dữ liệu, chỉ là sẽ chậm hơn có nhiều RAM thôi.
+
 </div>
 
