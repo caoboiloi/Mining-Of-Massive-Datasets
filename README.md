@@ -235,8 +235,10 @@ Khi thực thi, việc gọi các transformations, Spark sẽ không ngay lập 
 * https://cloudfun.vn/threads/phan-biet-apache-hadoop-va-apache-spark.94/
 * https://blog.itnavi.com.vn/mapreduce-nhung-uu-diem-va-cach-thuc-hoat-dong-cua-nen-tang-nay/
 * https://forums.bsdinsight.com/threads/big-data-7-%E2%80%93-mapreduce-la-gi.6730/
+* http://acme.byu.edu/wp-content/uploads/2020/01/Spark.pdf
 * http://lib.uet.vnu.edu.vn/bitstream/123456789/845/2/K20KTPM_VuThiThanh_Tomtatluanvan.pdf
 * https://text.123doc.net/document/5216350-nghien-cuu-mo-hinh-lap-trinh-mapreduce.htm
+* https://dl.acm.org/doi/abs/10.1145/1739041.1739056
 * https://www.facebook.com/notes/c%E1%BB%99ng-%C4%91%E1%BB%93ng-big-data-vi%E1%BB%87t-nam/apache-spark-fundamentals-ph%E1%BA%A7n-1/510098719868983/
 
 
