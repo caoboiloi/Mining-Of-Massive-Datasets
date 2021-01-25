@@ -229,5 +229,17 @@ Khi thực thi, việc gọi các transformations, Spark sẽ không ngay lập 
 
 ![Lazy evaluation](https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.0-9/93971819_2568476270051945_7305492388401643520_n.jpg?_nc_cat=109&ccb=2&_nc_sid=32a93c&_nc_ohc=egBQmEknmJgAX--8_ob&_nc_ht=scontent.fsgn2-4.fna&oh=47a1a8be1b48df5e72fd5f6cb5d956a5&oe=602FB754)
 
+# TÀI LIỆU THAM KHẢO:
+
+* https://viblo.asia/p/tong-quan-ve-apache-spark-cho-he-thong-big-data-RQqKLxR6K7z
+* https://cloudfun.vn/threads/phan-biet-apache-hadoop-va-apache-spark.94/
+* https://blog.itnavi.com.vn/mapreduce-nhung-uu-diem-va-cach-thuc-hoat-dong-cua-nen-tang-nay/
+* https://forums.bsdinsight.com/threads/big-data-7-%E2%80%93-mapreduce-la-gi.6730/
+* http://lib.uet.vnu.edu.vn/bitstream/123456789/845/2/K20KTPM_VuThiThanh_Tomtatluanvan.pdf
+* https://text.123doc.net/document/5216350-nghien-cuu-mo-hinh-lap-trinh-mapreduce.htm
+* https://www.facebook.com/notes/c%E1%BB%99ng-%C4%91%E1%BB%93ng-big-data-vi%E1%BB%87t-nam/apache-spark-fundamentals-ph%E1%BA%A7n-1/510098719868983/
+
+
+
 </div>
 
