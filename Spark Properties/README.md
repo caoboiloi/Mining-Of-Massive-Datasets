@@ -43,6 +43,6 @@ Ví dụ:
 
 spark.eventLog.enabled - Có ghi lại các sự kiện Spark hay không, hữu ích trong việc tạo lại giao diện người dùng Web sau khi ứng dụng hoàn tất.
 
-![spark.eventLog.enabled](../spark_eventLog_enabled.png)
+![spark.eventLog.enabled](../Spark_eventLog_enabled.png)
 
 </div>
