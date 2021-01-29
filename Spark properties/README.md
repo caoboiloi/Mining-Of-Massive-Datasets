@@ -13,12 +13,29 @@ Ngoài ra có thể xác định giá trị mặc định thông qua spark-defau
 
 Hầu hết các thuộc tính đều có giá trị mặc định hợp lý. Một số thuộc tính như:
 
-### Thuộc tính ứng dụng
+### Thuộc tính ứng dụng *(Application Properties)*
 
 Ví dụ:
+
 spark.app.name - Tên ứng dụng của bạn, được hiển thị trong giao diện người dùng và trong dữ liệu nhật ký.
 
 ![Spark app name](../Image/Spark_app_name.png)
+
+Ngoài ra còn nhiều thuộc tính khác như:
+
+* spark.driver.cores
+* spark.driver.memory
+* spark.driver.memoryOverhead
+* spark.resources.discoveryPlugin,...
+
+### Thuộc tính xáo trộn *(Shuffle Behavior)*
+
+Một vài thuộc tính như:
+
+* spark.reducer.maxSizeInFlight
+* spark.reducer.maxReqsInFlight
+* spark.reducer.maxBlocksInFlightPerAddress
+* spark.shuffle.compress,...
 
 
 
