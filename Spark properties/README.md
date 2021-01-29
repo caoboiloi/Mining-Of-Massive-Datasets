@@ -37,6 +37,12 @@ Một vài thuộc tính như:
 * spark.reducer.maxBlocksInFlightPerAddress
 * spark.shuffle.compress,...
 
+### Giao diện người dùng Spark *(Spark UI)*
 
+Ví dụ:
+
+spark.eventLog.enabled - Có ghi lại các sự kiện Spark hay không, hữu ích trong việc tạo lại giao diện người dùng Web sau khi ứng dụng hoàn tất.
+
+![spark.eventLog.enabled](../spark_eventLog_enabled.png)
 
 </div>
