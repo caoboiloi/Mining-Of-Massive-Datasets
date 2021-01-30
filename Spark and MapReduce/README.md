@@ -1,6 +1,6 @@
 <div align="justify">
 
-# Tổng quan về MapReduce
+# TỔNG QUAN VỀ MAPREDUCE
 
 ### MapReduce là gì ?
 
@@ -90,7 +90,7 @@ Output Writer
 
 ![MapReduce](https://blog.itnavi.com.vn/wp-content/uploads/2020/06/Mapreduce-l%C3%A0-g%C3%AC-4.jpg)
 
-# Tổng quan về Apache Spark
+# TỔNG QUAN VỀ APACHE SPARK
 
 ![Apache Spark](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.0-9/92210827_2562659827300256_1174788299802279936_n.jpg?_nc_cat=102&ccb=2&_nc_sid=74df0b&_nc_ohc=kifyepT5UTgAX8nyvFX&_nc_ht=scontent.fsgn2-5.fna&oh=0a8e3ce705a1df978f105c6d00ddb978&oe=602D6251)
 
