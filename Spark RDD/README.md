@@ -57,8 +57,41 @@ text_file = spark.sparkContext.textFile("drive/MyDrive/BIGDATA/Week1/exercise2.t
 ```
 
 Sau khi RDD được tạo, bạn có thể thực hiện các hoạt động của tập dữ liệu.
-Ví dụ: Cộng các khoá trong cặp từ nếu tự đó giống nhau
+Ví dụ: gán các khoá cho các giá trị có trong tập *dataList*
 
+```python
+import pyspark
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SparkSession
+import collections
+spark = SparkSession.builder.master("local[2]").appName("WordCount").getOrCreate()
+dataList = ["Java", "Python", "Scala", 'Javascript']
+rdd = spark.sparkContext.parallelize(dataList)
+key = rdd.map(lambda word: (word, 1))
+print(key.collect())
+
+result: [('Java', 1), ('Python', 1), ('Scala', 1), ('Javascript', 1)]
+```
+
+Khi bạn có RDD, bạn có thể thực hiện các hoạt động chuyển đổi và hành động. Bất kỳ hoạt động nào bạn thực hiện trên RDD đều chạy song song.
+
+# RDD OPERATIONS
+
+Trên PySpark RDD, bạn có thể thực hiện hai loại hoạt động:
+
+* Các phép biến đổi RDD **(RDD transformations)** - Các phép biến  đổi là các *lazy operations*. Khi bạn chạy một chuyển đổi (ví dụ: cập nhật), thay vì cập nhật một RDD hiện tại, các hoạt động này trả về một RDD khác.
+
+* Các hành động RDD **(RDD actions)** - các hoạt động kích hoạt tính toán và trả về các giá trị RDD cho trình điều khiển.
+
+![Spark_transformation_action](../image/Spark_transformation_action.png)
+
+## Làm việc với các cặp khoá - giá trị *(Working with Key-Value Pairs)*
+
+Spark cung cấp các hoạt động đặc biệt trên RDD có chứa các cặp khóa / giá trị. Các RDD này được gọi là RDD cặp. Cặp RDD là một khối xây dựng hữu ích trong nhiều chương trình, vì chúng thể hiện các hoạt động cho phép bạn thực hiện song song từng khóa hoặc nhóm lại dữ liệu trên toàn mạng.
+
+Ví dụ: cặp RDD có một phương thức reduceByKey() có thể tổng hợp dữ liệu riêng biệt cho từng khóa và một phương thức join() có thể hợp nhất hai RDD với nhau bằng cách nhóm các phần tử có cùng một khóa. Thông thường, trích xuất các trường từ RDD (ví dụ: đại diện cho thời gian sự kiện, ID khách hàng hoặc số nhận dạng khác) và sử dụng các trường đó làm khóa trong các phép toán RDD theo cặp.
+
+Ví dụ 2: Cộng các khoá trong cặp khoá - giá trị nếu giá trị của từng cặp giống nhau
 ```python
 import pyspark
 from pyspark import SparkConf, SparkContext
@@ -67,15 +100,15 @@ import collections
 spark = SparkSession.builder.master("local[2]").appName("WordCount").getOrCreate()
 dataList = [("Java", 20000), ("Python", 100000), ("Scala", 3000), ('Java',2300)]
 rdd = spark.sparkContext.parallelize(dataList)
-counts = rdd.reduceByKey(lambda x, y: x + y)
-print(counts.collect())
+counts_test = rdd.reduceByKey(lambda x, y: x + y)
+print(counts_test.collect())
 
 result: [('Java', 22300), ('Python', 100000), ('Scala', 3000)]
 ```
 
-Khi bạn có RDD, bạn có thể thực hiện các hoạt động chuyển đổi và hành động. Bất kỳ hoạt động nào bạn thực hiện trên RDD đều chạy song song.
+## Phép biến đổi RDD *(RDD Transformations)*
 
-# RDD OPERATIONS
+
 
 
 
@@ -89,5 +122,6 @@ Khi bạn có RDD, bạn có thể thực hiện các hoạt động chuyển đ
 * https://spark.apache.org/docs/latest/rdd-programming-guide.html
 * https://ichi.pro/vi/vi-du-ve-viec-su-dung-apache-spark-voi-pyspark-bang-python-267611095265298
 * https://laptrinh.vn/link/93#bkmrk-t%E1%BA%A1o-t%E1%BB%AB-m%E1%BB%99t-t%E1%BA%ADp-h%E1%BB%A3p-d
+* https://www.oreilly.com/library/view/learning-spark/9781449359034/ch04.html#:~:text=Spark%20provides%20special%20operations%20on,regroup%20data%20across%20the%20network.
 
 </div>
