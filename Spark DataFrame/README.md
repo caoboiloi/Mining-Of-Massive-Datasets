@@ -20,7 +20,11 @@ Dataframe thường đề cập đến một cấu trúc dữ liệu, có bản 
 
 # DATAFRAME CREATION
 
+DataFrame trong Pyspark có thể được tạo theo nhiều cách:
+
 ![sources_spark_dataframe](../Image/sources_spark_dataframe.png)
+
+Dữ liệu có thể được tải vào thông qua tệp CSV, JSON, XML hoặc tệp Parquet. Nó cũng có thể được tạo bằng cách sử dụng RDD hiện có và thông qua bất kỳ cơ sở dữ liệu nào khác, như Hive Table hay Apache Cassandra . Nó cũng có thể lấy dữ liệu từ HDFS hoặc hệ thống tệp cục bộ.
 
 ## sử dụng *createDataFrame()*
 
