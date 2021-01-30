@@ -25,6 +25,34 @@ Các thuộc tính chỉ định một số khoảng thời gian với một đ�
 5d (days)
 1y (years)
 ```
+
+Các thuộc tính chỉ định kích thước byte so với một đơn vị kích thước. Các định dạng sau được chấp nhận trong Spark:
+
+```note
+1b (bytes)
+1k or 1kb (kibibytes = 1024 bytes)
+1m or 1mb (mebibytes = 1024 kibibytes)
+1g or 1gb (gibibytes = 1024 mebibytes)
+1t or 1tb (tebibytes = 1024 gibibytes)
+1p or 1pb (pebibytes = 1024 tebibytes)
+```
+
+# TẢI ĐỘNG ĐỐI VỚI CÁC THUỘC TÍNH SPARK *(DYNAMICALLY LOADING SPARK PROPERTIES)*
+
+Trong một số trường hợp, ta có thể tránh việc thiết lập cứng cho các cấu hình mặc định trong một SparkConf. 
+
+Ví dụ: nếu bạn muốn chạy cùng một ứng dụng với các bản gốc khác nhau hoặc số lượng bộ nhớ khác nhau. Spark cho phép bạn chỉ cần tạo một SparkConf() trống:
+
+```python
+val sc = new SparkContext(new SparkConf())
+```
+
+Sau đó, bạn có thể cung cấp các giá trị cấu hình trong lúc chạy spark:
+
+```
+./bin/spark-submit --name "My app" --master local[4] --conf spark.eventLog.enabled=false --conf "spark.executor.extraJavaOptions=-XX:+PrintGCDetails -XX:+PrintGCTimeStamps" myApp.jar
+```
+
 # XEM THUỘC TÍNH CỦA SPARK *(VIEWING SPARK PROPERTIES)*
 
 Apache spark cung cấp một bộ giao diện người dùng web tại địa chỉ http://localhost:4040 (Jobs, Stages, Tasks, Storage, Environment, Executors, and SQL). Vào thẻ Environment để xem danh sách các thuộc tính của Spark:
