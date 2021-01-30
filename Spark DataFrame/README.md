@@ -92,6 +92,81 @@ DataFrame có một bộ API phong phú hỗ trợ đọc và ghi một số đ�
 * tsv
 * xml và nhiều hơn nữa,...
 
+# VÍ DỤ CỤ THỂ VIỆC SỬ DỤNG DATAFRAME LOAD DATA TỪ 1 FILE CSV
+
+## Đọc dữ liệu từ tệp CSV
+
+```python
+import pyspark
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SparkSession
+from google.colab import drive
+drive.mount('/content/drive', force_remount=True)
+import collections
+spark = SparkSession.builder.master("local[2]").appName("dataframetest").getOrCreate()
+df = spark.read.csv("drive/MyDrive/BIGDATA/Week2/DataFrame/Fifa_players.csv", inferSchema = True, header = True)
+df.show()
+```
+result:
+```note
+Mounted at /content/drive
++---+---+-------+----------+------------------+-------------------+-------------------+----------+
+|_c0|Age|Country|Height(cm)|International Caps|International Goals|               Name|      Role|
++---+---+-------+----------+------------------+-------------------+-------------------+----------+
+|  0| 29|   Peru|  189.0 cm|                42|                  0|      Pedro GALLESE|Goalkeeper|
+|  1| 34|   Peru|  179.0 cm|                75|                  0|  Alberto RODRIGUEZ|  Defender|
+|  2| 29|   Peru|  172.0 cm|                24|                  0|         Aldo CORZO|  Defender|
+|  3| 27|   Peru|  185.0 cm|                 8|                  0|Anderson SANTAMARIA|  Defender|
+|  4| 24|   Peru|  178.0 cm|                 8|                  0|      Miguel ARAUJO|  Defender|
+|  5| 26|   Peru|  169.0 cm|                29|                  0|      Miguel TRAUCO|  Defender|
+|  6| 28|   Peru|  175.0 cm|                34|                  3|      Paolo HURTADO|Midfielder|
+|  7| 27|   Peru|  169.0 cm|                48|                  8|    Christian CUEVA|Midfielder|
+|  8| 35|   Peru|  185.0 cm|                92|                 36|     Paolo GUERRERO|   Forward|
+|  9| 34|   Peru|  178.0 cm|                86|                 25|   Jefferson FARFAN|   Forward|
+| 10| 28|   Peru|  169.0 cm|                32|                  4|       Raul RUIDIAZ|   Forward|
+| 11| 27|   Peru|  185.0 cm|                 6|                  0|      Carlos CACEDA|Goalkeeper|
+| 12| 23|   Peru|  185.0 cm|                33|                  3|       Renato TAPIA|Midfielder|
+| 13| 24|   Peru|  174.0 cm|                17|                  1|          Andy POLO|Midfielder|
+| 14| 30|   Peru|  185.0 cm|                73|                  3|    Christian RAMOS|  Defender|
+| 15| 24|   Peru|  179.0 cm|                 4|                  0|   Wilder CARTAGENA|Midfielder|
+| 16| 29|   Peru|  178.0 cm|                68|                  0|     Luis ADVINCULA|  Defender|
+| 17| 27|   Peru|  181.0 cm|                49|                  6|     Andre CARRILLO|   Forward|
+| 18| 28|   Peru|  173.0 cm|                76|                  2|     Yoshimar YOTUN|Midfielder|
+| 19| 24|   Peru|  170.0 cm|                32|                  9|      Edison FLORES|   Forward|
++---+---+-------+----------+------------------+-------------------+-------------------+----------+
+only showing top 20 rows
+```
+Để có một cái nhìn vào lược đồ tức là cấu trúc của DataFrame, ta sẽ sử dụng phương thức **printSchema** . Điều này sẽ cung cấp cho ta các cột khác nhau trong khung dữ liệu của chúng tôi cùng với kiểu dữ liệu và điều kiện có thể null cho cột cụ thể đó:
+
+```python
+fifa_df.printSchema()
+```
+result:
+```note
+root
+ |-- _c0: integer (nullable = true)
+ |-- Age: integer (nullable = true)
+ |-- Country: string (nullable = true)
+ |-- Height(cm): string (nullable = true)
+ |-- International Caps: integer (nullable = true)
+ |-- International Goals: integer (nullable = true)
+ |-- Name: string (nullable = true)
+ |-- Role: string (nullable = true)
+```
+
+Khi chúng ta muốn xem tên và đếm số Hàng và Cột của một DataFrame cụ thể, chúng ta sử dụng các phương pháp sau:
+
+```python
+df.columns # Column Names
+df.count() # Row Count
+len(df.columns)
+```
+result:
+```note
+['_c0', 'Age', 'Country', 'Height(cm)', 'International Caps', 'International Goals', 'Name', 'Role']
+736
+8
+```
 # TÀI LIỆU THAM KHẢO
 
 * https://codetudau.com/xu-ly-du-lieu-voi-spark-dataframe/index.html
