@@ -78,4 +78,10 @@ DataFrame có một bộ API phong phú hỗ trợ đọc và ghi một số đ�
 * tsv
 * xml và nhiều hơn nữa
 
+# TÀI LIỆU THAM KHẢO
+
+* https://codetudau.com/xu-ly-du-lieu-voi-spark-dataframe/index.html
+* https://helpex.vn/article/huong-dan-pyspark-dataframe-gioi-thieu-ve-dataframes-5c6b21e6ae03f628d053c29e
+* https://www.edureka.co/blog/pyspark-dataframe-tutorial/#what
+* https://sparkbyexamples.com/pyspark-tutorial/
 </div>
