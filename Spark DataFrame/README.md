@@ -17,28 +17,34 @@ Dataframe thường đề cập đến một cấu trúc dữ liệu, có bản 
 Bằng cách sử dụng createDataFrame()chức năng của SparkSession, bạn có thể tạo một DataFrame:
 
 ```python
-data = [('James','','Smith','1991-04-01','M',3000),
-  ('Michael','Rose','','2000-05-19','M',4000),
-  ('Robert','','Williams','1978-09-05','M',4000),
-  ('Maria','Anne','Jones','1967-12-01','F',4000),
-  ('Jen','Mary','Brown','1980-02-17','F',-1)
+import pyspark
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SparkSession
+import collections
+spark = SparkSession.builder.master("local[2]").appName("dataframetest").getOrCreate()
+data = [('51800574','Loi','Tan','Huynh','2000-02-26','M',3320),
+  ('51800544','Minh','Nhat','Pham','2000-05-19','M',1000),
+  ('51800302','Linh','Nhat','Nguyen','2000-09-05','M',4000),
+  ('51800112','Nam','Van','Ho','2000-04-01','M',2200),
+  ('51800115','Thong','Huy','Luu','2000-07-17','M',3480)
 ]
-columns = ["firstname","middlename","lastname","dob","gender","salary"]
+
+columns = ["id","firstname","middlename","lastname","birth","gender","salary"]
 df = spark.createDataFrame(data=data, schema = columns)
-# hiển thị 20 phần tử từ DataFrame
+# df.show() hiển thị 20 phần tử đầu
 df.show()
 ```
 
 ```note
-+---------+----------+--------+----------+------+------+
-|firstname|middlename|lastname|       dob|gender|salary|
-+---------+----------+--------+----------+------+------+
-|    James|          |   Smith|1991-04-01|     M|  3000|
-|  Michael|      Rose|        |2000-05-19|     M|  4000|
-|   Robert|          |Williams|1978-09-05|     M|  4000|
-|    Maria|      Anne|   Jones|1967-12-01|     F|  4000|
-|      Jen|      Mary|   Brown|1980-02-17|     F|    -1|
-+---------+----------+--------+----------+------+------+
++--------+---------+----------+--------+----------+------+------+
+|      id|firstname|middlename|lastname|     birth|gender|salary|
++--------+---------+----------+--------+----------+------+------+
+|51800574|      Loi|       Tan|   Huynh|2000-02-26|     M|  3320|
+|51800544|     Minh|      Nhat|    Pham|2000-05-19|     M|  1000|
+|51800302|     Linh|      Nhat|  Nguyen|2000-09-05|     M|  4000|
+|51800112|      Nam|       Van|      Ho|2000-04-01|     M|  2200|
+|51800115|    Thong|       Huy|     Luu|2000-07-17|     M|  3480|
++--------+---------+----------+--------+----------+------+------+
 ```
 
 </div>
