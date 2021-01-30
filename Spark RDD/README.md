@@ -136,6 +136,27 @@ Một số RDD actions:
 * **top và takeOrdered**: top sẽ hiệu quả hơn takeOrdered vì top lấy các giá trị đầu tiên được sắp xếp ngầm trong RDD.
 * **takeSamples**: lấy một lượng giá trị ngẫu nhiên trong RDD
 
+# MỘT SỐ KỸ THUẬT ĐỐI VỚI SPARK RDD
+
+## Lưu trữ file:
+
+* Thực hiện ghi vào các file plain-text
+* Có thể sử dụng các codec nén từ thư viện của Hadoop
+* Lưu trữ vào các database bên ngoài yêu cầu ta phải lặp qua tất cả partition của RDD – Công việc được thực hiện ngầm trong các high-level API
+* sequenceFile là một flat file chứa các cặp key-value, thường được sử dụng làm định dạng input/output của MapReduce. Spark có thể ghi các sequenceFile bằng các ghi lại các cặp key-value
+* Đồng thời, Spark cũng hỗ trợ ghi nhiều định dạng file khác nhau, cho phép define các class, định dạng output, config và compression scheme của Hadoop.
+
+## Caching: Tăng tốc xử lý bằng cache
+
+* Caching với RDD, Dataset hay DataFrame có nguyên lý như nhau.
+* Chúng ta có thể lựa chọn cache hay persist một RDD, và mặc định, chỉ xử lý dữ liệu trong bộ nhớ
+
+## Checkpointing: Lưu trữ lại các bước xử lý để phục hồi
+ 
+* Checkpointing lưu RDD vào đĩa cứng để các tiến trình khác để thể sử dụng lại RDD point này làm partition trung gian thay vì tính toán lại RDD từ các nguồn dữ liệu gốc
+* Checkpointing cũng tương tự như cache, chỉ khác nhau là lưu trữ vào đĩa cứng và không dùng được trong API của DataFrame
+* Cần sử dụng nhiều để tối ưu tính toán.
+
 # TÀI LIỆU THAM KHẢO
 
 * https://laptrinh.vn/books/apache-spark/page/apache-spark-rdd
