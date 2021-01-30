@@ -20,6 +20,8 @@ Dataframe thường đề cập đến một cấu trúc dữ liệu, có bản 
 
 # DATAFRAME CREATION
 
+![sources_spark_dataframe](../Image/sources_spark_dataframe.png)
+
 ## sử dụng *createDataFrame()*
 
 Bằng cách sử dụng createDataFrame()chức năng của SparkSession, bạn có thể tạo một DataFrame:
