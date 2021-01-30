@@ -32,7 +32,11 @@ SparkContext có một số chức năng để sử dụng với RDD.
 Ví dụ: phương thức parallelize() của nó được sử dụng để tạo RDD từ một danh sách.
 
 ```python
-#Create RDD from parallelize
+import pyspark
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SparkSession
+import collections
+# Create RDD from parallelize
 spark = SparkSession.builder().master("local[2]").appName("WordCount").getOrCreate()
 dataList = [("Java", 20000), ("Python", 100000), ("Scala", 3000)]
 rdd = spark.sparkContext.parallelize(dataList)
@@ -41,12 +45,39 @@ rdd = spark.sparkContext.parallelize(dataList)
 ## Sử dụng textFile()
 
 ```python
-//Create RDD from external Data source
-spark = SparkSession.builder().master("local[2]").appName("WordCount").getOrCreate()
+import pyspark
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SparkSession
+from google.colab import drive
+drive.mount('/content/drive')
+import collections
+# Create RDD from external Data source
+spark = SparkSession.builder.master("local[2]").appName("WordCount").getOrCreate()
 text_file = spark.sparkContext.textFile("drive/MyDrive/BIGDATA/Week1/exercise2.txt")
 ```
 
+Sau khi RDD được tạo, bạn có thể thực hiện các hoạt động của tập dữ liệu.
+Ví dụ: Cộng các khoá trong cặp từ nếu tự đó giống nhau
+
+```python
+import pyspark
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SparkSession
+import collections
+spark = SparkSession.builder.master("local[2]").appName("WordCount").getOrCreate()
+dataList = [("Java", 20000), ("Python", 100000), ("Scala", 3000), ('Java',2300)]
+rdd = spark.sparkContext.parallelize(dataList)
+counts = rdd.reduceByKey(lambda x, y: x + y)
+print(counts.collect())
+
+result: [('Java', 22300), ('Python', 100000), ('Scala', 3000)]
+```
+
 Khi bạn có RDD, bạn có thể thực hiện các hoạt động chuyển đổi và hành động. Bất kỳ hoạt động nào bạn thực hiện trên RDD đều chạy song song.
+
+# RDD OPERATIONS
+
+
 
 # TÀI LIỆU THAM KHẢO
 
