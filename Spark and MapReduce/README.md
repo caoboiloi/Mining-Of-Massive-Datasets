@@ -229,7 +229,7 @@ Khi thực thi, việc gọi các transformations, Spark sẽ không ngay lập 
 
 ![Lazy evaluation](https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.0-9/93971819_2568476270051945_7305492388401643520_n.jpg?_nc_cat=109&ccb=2&_nc_sid=32a93c&_nc_ohc=egBQmEknmJgAX--8_ob&_nc_ht=scontent.fsgn2-4.fna&oh=47a1a8be1b48df5e72fd5f6cb5d956a5&oe=602FB754)
 
-# Tài liệu tham khảo
+# TÀI LIỆU THAM KHẢO
 
 * https://viblo.asia/p/tong-quan-ve-apache-spark-cho-he-thong-big-data-RQqKLxR6K7z
 * https://cloudfun.vn/threads/phan-biet-apache-hadoop-va-apache-spark.94/

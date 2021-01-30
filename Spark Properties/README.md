@@ -156,4 +156,10 @@ Ngoài các loại thuộc tính trên, Spark còn hỗ trợ nhiều loại thu
 * Cấu hình Thread (Thread Configurations)
 * Bảo mật (Security)
 
+# TÀI LIỆU THAM KHẢO
+
+* https://spark.apache.org/docs/latest/configuration.html
+* https://docs.cloudera.com/runtime/7.2.6/running-spark-applications/topics/spark-configure-properties-spark-defaults-conf.html
+* https://sparkbyexamples.com/pyspark-tutorial/
+
 </div>
