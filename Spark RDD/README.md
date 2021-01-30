@@ -17,14 +17,40 @@ Lấy từ dataset hệ thống lưu trữ bên ngoài như HDFS, Hbase hoặc c
 
 **SparkSession** tạo ra một biến sparkContext. Có thể tạo nhiều đối tượng SparkSession nhưng chỉ một SparkContext cho mỗi JVM (Java virtual machine). Trong trường hợp nếu bạn muốn tạo một SparkContext mới khác, bạn nên dừng Sparkcontext hiện có (sử dụng  *stop()*) trước khi tạo một cái mới.
 
-Ví dụ:
+Ví dụ: khởi tạo một ứng dụng có tên *WordCount* với hai luồng như sau
 
 ```python
 spark = SparkSession.builder()
       .master("local[2]")
       .appName("WordCount")
-      .getOrCreate()  
+      .getOrCreate()
 ```
+## Sử dụng parallelize()
+
+SparkContext có một số chức năng để sử dụng với RDD.
+
+Ví dụ: phương thức parallelize() của nó được sử dụng để tạo RDD từ một danh sách.
+
+```python
+#Create RDD from parallelize
+dataList = [("Java", 20000), ("Python", 100000), ("Scala", 3000)]
+rdd=spark.sparkContext.parallelize(dataList)
+```
+
+## Sử dụng textFile()
+
+```python
+import pyspark
+from pyspark import SparkConf, SparkContext
+from google.colab import drive
+drive.mount('/content/drive')
+import collections
+conf = SparkConf().setMaster("local").setAppName("count")
+sc = SparkContext.getOrCreate(conf=conf)
+text_file = sc.textFile("drive/MyDrive/BIGDATA/Week1/exercise2.txt")
+```
+
+Khi bạn có RDD, bạn có thể thực hiện các hoạt động chuyển đổi và hành động. Bất kỳ hoạt động nào bạn thực hiện trên RDD đều chạy song song.
 
 # TÀI LIỆU THAM KHẢO
 
