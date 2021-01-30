@@ -60,7 +60,7 @@ import pyspark
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SparkSession
 from google.colab import drive
-drive.mount('/content/drive')
+drive.mount('/content/drive', force_remount=True)
 import collections
 spark = SparkSession.builder.master("local[2]").appName("dataframetest").getOrCreate()
 df = spark.read.csv("drive/MyDrive/BIGDATA/Week2/DataFrame/DataAnalyst.csv")
