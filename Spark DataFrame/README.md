@@ -232,6 +232,12 @@ result:
 +-------------------+------------------+
 only showing top 20 rows
 ```
+
+Ngoài những cách trên, còn nhiều cách có thể đào tạo dữ liệu của chúng ta như:
+* Chọn nhiều cột riêng biệt
+* Lọc dữ liệu
+* Lọc dữ liệu (Nhiều tham số)
+* Sắp xếp dữ liệu (OrderBy),...
 # TÀI LIỆU THAM KHẢO
 
 * https://codetudau.com/xu-ly-du-lieu-voi-spark-dataframe/index.html
