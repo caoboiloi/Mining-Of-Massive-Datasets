@@ -1,6 +1,21 @@
 <div align="justify">
 
-# CÁC THUỘC TÍNH CỦA SPARK *(SPARK PROPERTIES)*
+# THUỘC TÍNH SPARK *(SPARK PROPERTIES)*
+
+Thuộc tính Spark kiểm soát hầu hết các cài đặt ứng dụng và được cấu hình riêng cho từng ứng dụng. Các thuộc tính này có thể được đặt trực tiếp trên SparkConf được chuyển đến của bạn SparkContext. SparkConf cho phép bạn định cấu hình một số thuộc tính chung (ví dụ: URL chính và tên ứng dụng), cũng như các cặp key-value tùy ý thông qua phương thức set().
+
+Ví dụ: chúng ta có thể khởi tạo một ứng dụng với hai luồng như sau:
+
+``
+val conf = new SparkConf()
+             .setMaster("local[2]")
+             .setAppName("CountingSheep")
+val sc = new SparkContext(conf)
+``
+
+Lưu ý rằng chúng tôi chạy với local [2], nghĩa là hai luồng - thể hiện sự song song “tối thiểu”, có thể giúp phát hiện lỗi chỉ tồn tại khi chúng tôi chạy trong bối cảnh phân tán.
+
+# XEM THUỘC TÍNH CỦA SPARK *(VIEWING SPARK PROPERTIES)*
 
 Apache spark cung cấp một bộ giao diện người dùng web tại địa chỉ http://localhost:4040 (Jobs, Stages, Tasks, Storage, Environment, Executors, and SQL). Vào thẻ Environment để xem danh sách các thuộc tính của Spark:
 
@@ -66,5 +81,7 @@ Các thuộc tính khác:
 * spark.kryoserializer.buffer
 * spark.kryo.registrator
 * spark.kryo.referenceTracking, ...
+
+### 
 
 </div>
