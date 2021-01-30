@@ -141,6 +141,19 @@ Các thuộc tính khác:
 * spark.kryo.registrator
 * spark.kryo.referenceTracking, ...
 
-### 
+### Các loại thuộc tính khác
+
+Ngoài các loại thuộc tính trên, Spark còn hỗ trợ nhiều loại thuộc tính khác nhau:
+
+* Môi trường thực thi (Runtime Environment)
+* Quản lý bộ nhớ (Memory Management)
+* Hành vi thực thi (Execution Behavior)
+* Chỉ số thực thi (Executor Metrics)
+* Kết nối mạng (Networking)
+* Lập lịch (Scheduling)
+* Chế độ thực thi rào cản (Barrier Execution Mode)
+* Phân bố động (Dynamic Allocation)
+* Cấu hình Thread (Thread Configurations)
+* Bảo mật (Security)
 
 </div>
