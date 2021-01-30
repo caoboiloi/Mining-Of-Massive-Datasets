@@ -33,21 +33,17 @@ Ví dụ: phương thức parallelize() của nó được sử dụng để t�
 
 ```python
 #Create RDD from parallelize
+spark = SparkSession.builder().master("local[2]").appName("WordCount").getOrCreate()
 dataList = [("Java", 20000), ("Python", 100000), ("Scala", 3000)]
-rdd=spark.sparkContext.parallelize(dataList)
+rdd = spark.sparkContext.parallelize(dataList)
 ```
 
 ## Sử dụng textFile()
 
 ```python
-import pyspark
-from pyspark import SparkConf, SparkContext
-from google.colab import drive
-drive.mount('/content/drive')
-import collections
-conf = SparkConf().setMaster("local").setAppName("count")
-sc = SparkContext.getOrCreate(conf=conf)
-text_file = sc.textFile("drive/MyDrive/BIGDATA/Week1/exercise2.txt")
+//Create RDD from external Data source
+spark = SparkSession.builder().master("local[2]").appName("WordCount").getOrCreate()
+text_file = spark.sparkContext.textFile("drive/MyDrive/BIGDATA/Week1/exercise2.txt")
 ```
 
 Khi bạn có RDD, bạn có thể thực hiện các hoạt động chuyển đổi và hành động. Bất kỳ hoạt động nào bạn thực hiện trên RDD đều chạy song song.
