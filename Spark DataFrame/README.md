@@ -96,6 +96,8 @@ DataFrame có một bộ API phong phú hỗ trợ đọc và ghi một số đ�
 
 ## Đọc dữ liệu từ tệp CSV
 
+Link file dataset: https://www.kaggle.com/hverified/web-scraped-data-of-fifa-world-cup-2018-players
+
 ```python
 import pyspark
 from pyspark import SparkConf, SparkContext
