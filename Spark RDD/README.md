@@ -118,7 +118,7 @@ Một số RDD Transformations:
 * **sortBy**: mô tả một hàm để trích xuất dữ liệu từ các object của RDD và thực hiện sort được từ đó.
 * **randomSplit**: nhận một mảng trọng số và tạo một random seed, tách các RDD thành một mảng các RDD có số lượng chia theo trọng số.
 
-## Các hành động RDD *(RDD actions)*
+## Các hành động RDD *(RDD Actions)*
 
 Action thực thi ngay các transformation đã được thiết lập để thu thập dữ liệu về driver để xử lý hoặc ghi dữ liệu xuống các công cụ lưu trữ.
 

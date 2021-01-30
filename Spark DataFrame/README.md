@@ -47,4 +47,35 @@ df.show()
 +--------+---------+----------+--------+----------+------+------+
 ```
 
+## DataFrame Operations
+
+Giống như RDD, DataFrame cũng có các hoạt động như Biến đổi (DataFrame Transformations) và Hành động (DataFrame Actions).
+
+## DataFrame từ nguồn dữ liệu bên ngoài
+
+Ví dụ:
+
+```python
+import pyspark
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SparkSession
+from google.colab import drive
+drive.mount('/content/drive')
+import collections
+spark = SparkSession.builder.master("local[2]").appName("dataframetest").getOrCreate()
+df = spark.read.csv("drive/MyDrive/BIGDATA/Week2/DataFrame/DataAnalyst.csv")
+df.printSchema()
+```
+
+## Các định dạng tệp được hỗ trợ
+
+DataFrame có một bộ API phong phú hỗ trợ đọc và ghi một số định dạng tệp như:
+
+* csv
+* bản văn
+* Avro
+* Sàn gỗ
+* tsv
+* xml và nhiều hơn nữa
+
 </div>
