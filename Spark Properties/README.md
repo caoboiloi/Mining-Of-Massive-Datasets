@@ -47,11 +47,32 @@ Ví dụ: nếu bạn muốn chạy cùng một ứng dụng với các bản g�
 val sc = new SparkContext(new SparkConf())
 ```
 
-Sau đó, bạn có thể cung cấp các giá trị cấu hình trong lúc chạy spark:
+Sau đó, bạn có thể cung cấp các giá trị cấu hình trong lúc chạy Spark:
 
 ```
 ./bin/spark-submit --name "My app" --master local[4] --conf spark.eventLog.enabled=false --conf "spark.executor.extraJavaOptions=-XX:+PrintGCDetails -XX:+PrintGCTimeStamps" myApp.jar
 ```
+
+**Spark shell** và công cụ **spark-submit** hỗ trợ hai cách để tải cấu hình động cho các thuộc tính trong Spark. Đầu tiên là các tùy chọn dòng lệnh, chẳng hạn như **--master**, như được hiển thị ở trên. **spark-submit** có thể chấp nhận bất kỳ thuộc tính Spark nào bằng cách sử dụng flag **--conf/-c**, việc sử dụng flag đặc biệt cho các thuộc tính đóng một phần trong việc khởi chạy ứng dụng Spark. Lệnh chạy **./bin/spark-submit --help** sẽ hiển thị toàn bộ danh sách các tùy chọn này.
+
+**bin/spark-submit** cũng sẽ đọc các tùy chọn cấu hình từ **conf/spark-defaults.conf**, trong đó mỗi dòng bao gồm một khóa và một giá trị được phân tách bằng khoảng trắng.
+
+Ví dụ:
+
+```note
+spark.master            spark://5.6.7.8:7077
+spark.executor.memory   4g
+spark.eventLog.enabled  true
+spark.serializer        org.apache.spark.serializer.KryoSerializer
+```
+
+Mọi giá trị được chỉ định dưới dạng flag hoặc trong file thuộc tính sẽ được chuyển đến ứng dụng và được hợp nhất với những giá trị được chỉ định thông qua **SparkConf**. Các thuộc tính được đặt trực tiếp trên **SparkConf** được ưu tiên cao nhất, sau đó các flag được chuyển đến **spark-submit** hoặc **spark-shell**, sau đó là các tùy chọn trong file **spark-defaults.conf**. Một vài khóa cấu hình đã được đổi tên kể từ các phiên bản Spark trước đó; trong những trường hợp như vậy, các tên khóa cũ hơn vẫn được chấp nhận, nhưng được ưu tiên thấp hơn bất kỳ trường hợp nào của khóa mới hơn.
+
+Các thuộc tính của Spark chủ yếu có thể được chia thành hai loại:
+
+* một là liên quan đến triển khai, như **spark.driver.memory**, **spark.executor.instances**, loại thuộc tính này có thể không bị ảnh hưởng khi thiết lập theo chương trình **SparkConf** trong thời gian chạy, hoặc hành vi tùy thuộc vào trình quản lý cụm và chế độ triển khai mà bạn chọn, vì vậy bạn nên đặt thông qua file cấu hình hoặc tùy chọn dòng lệnh trên **spark-submit**.
+
+* một cái khác chủ yếu liên quan đến kiểm soát thời gian chạy Spark, như **spark.task.maxFailures**, loại thuộc tính này có thể được đặt theo một trong hai cách.
 
 # XEM THUỘC TÍNH CỦA SPARK *(VIEWING SPARK PROPERTIES)*
 
