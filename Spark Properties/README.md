@@ -6,15 +6,12 @@ Thuộc tính Spark kiểm soát hầu hết các cài đặt ứng dụng và �
 
 Ví dụ: chúng ta có thể khởi tạo một ứng dụng với hai luồng như sau:
 
-``
+```python
 val conf = new SparkConf()
              .setMaster("local[2]")
              .setAppName("CountingSheep")
 val sc = new SparkContext(conf)
-``
-
-Lưu ý rằng chúng tôi chạy với local [2], nghĩa là hai luồng - thể hiện sự song song “tối thiểu”, có thể giúp phát hiện lỗi chỉ tồn tại khi chúng tôi chạy trong bối cảnh phân tán.
-
+```
 # XEM THUỘC TÍNH CỦA SPARK *(VIEWING SPARK PROPERTIES)*
 
 Apache spark cung cấp một bộ giao diện người dùng web tại địa chỉ http://localhost:4040 (Jobs, Stages, Tasks, Storage, Environment, Executors, and SQL). Vào thẻ Environment để xem danh sách các thuộc tính của Spark:
