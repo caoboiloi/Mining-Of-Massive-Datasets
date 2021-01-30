@@ -1,3 +1,5 @@
+<div align="justify">
+
 # TỔNG QUAN VỀ SPARK RDD *(RESILIENT DISTRIBUTED DATASETS)*
 
 Tập dữ liệu phân tán phục hồi (RDD - Resilient Distributed Datasets) một cấu trúc dữ liệu cơ bản của Spark. Nó là một tập hợp bất biến phân tán của một đối tượng. Mỗi dataset trong RDD được chia ra thành nhiều phần vùng logical. Có thể được tính toán trên các node khác nhau của một cụm máy chủ (cluster).
@@ -34,3 +36,5 @@ spark = SparkSession.builder()
 * https://spark.apache.org/docs/latest/rdd-programming-guide.html
 * https://ichi.pro/vi/vi-du-ve-viec-su-dung-apache-spark-voi-pyspark-bang-python-267611095265298
 * https://laptrinh.vn/link/93#bkmrk-t%E1%BA%A1o-t%E1%BB%AB-m%E1%BB%99t-t%E1%BA%ADp-h%E1%BB%A3p-d
+
+</div>
