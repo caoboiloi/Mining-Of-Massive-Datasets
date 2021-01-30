@@ -13,8 +13,18 @@ val conf = new SparkConf()
 val sc = new SparkContext(conf)
 ```
 
-Lưu ý: với **local[2]**, nghĩa là hai luồng -thể hiện được việc tối thiểu có 2 luồng đang chạy song song, có thể giúp phát hiện lỗi chỉ tồn tại khi ta chạy trong bối cảnh phân tán.
+Lưu ý: với **local[2]**, nghĩa là hai luồng - thể hiện được việc tối thiểu có 2 luồng đang chạy song song, có thể giúp phát hiện lỗi chỉ tồn tại khi ta chạy trong bối cảnh phân tán.
 
+Các thuộc tính chỉ định một số khoảng thời gian với một đơn vị thời gian. Các định dạng sau được chấp nhận trong Spark:
+
+```note
+25ms (milliseconds)
+5s (seconds)
+10m or 10min (minutes)
+3h (hours)
+5d (days)
+1y (years)
+```
 # XEM THUỘC TÍNH CỦA SPARK *(VIEWING SPARK PROPERTIES)*
 
 Apache spark cung cấp một bộ giao diện người dùng web tại địa chỉ http://localhost:4040 (Jobs, Stages, Tasks, Storage, Environment, Executors, and SQL). Vào thẻ Environment để xem danh sách các thuộc tính của Spark:
