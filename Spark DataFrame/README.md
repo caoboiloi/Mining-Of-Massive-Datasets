@@ -72,11 +72,11 @@ df.printSchema()
 DataFrame có một bộ API phong phú hỗ trợ đọc và ghi một số định dạng tệp như:
 
 * csv
-* bản văn
+* text
 * Avro
-* Sàn gỗ
+* Parquet
 * tsv
-* xml và nhiều hơn nữa
+* xml và nhiều hơn nữa,...
 
 # TÀI LIỆU THAM KHẢO
 
