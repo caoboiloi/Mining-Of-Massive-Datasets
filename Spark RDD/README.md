@@ -126,8 +126,8 @@ Một số RDD actions:
 * **count**: đếm số dòng trong RDD
 * **countApprox**: phiên bản đếm xấp xỉ của count, nhưng phải cung cấp timeout vì có thể không nhận được kết quả.
 * **countByValue**: đếm số giá trị của RDD
-        chỉ sử dụng nếu map kết quả nhỏ vì tất cả dữ liệu sẽ được load lên memory của driver để tính toán
-        chỉ nên sử dụng trong tình huống số dòng nhỏ và số lượng item khác nhau cũng nhỏ.
+        <div style="margin-left: 50px;">chỉ sử dụng nếu map kết quả nhỏ vì tất cả dữ liệu sẽ được load lên memory của driver để tính toán.</div>
+        <div style="margin-left: 50px;">chỉ nên sử dụng trong tình huống số dòng nhỏ và số lượng item khác nhau cũng nhỏ.</div>
 * **countApproxDistinct**: đếm xấp xỉ các giá trị khác nhau
 * **countByValueApprox**: đếm xấp xỉ các giá trị
 * **first**: lấy giá trị đầu tiên của dataset
