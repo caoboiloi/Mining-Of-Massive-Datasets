@@ -83,7 +83,7 @@ Trên PySpark RDD, bạn có thể thực hiện hai loại hoạt động:
 
 * Các hành động RDD **(RDD actions)** - các hoạt động kích hoạt tính toán và trả về các giá trị RDD cho trình điều khiển.
 
-![Spark_transformation_action](../image/Spark_transformation_action.png)
+![Spark_transformation_action](../Image/Spark_transformation_action.png)
 
 ## Làm việc với các cặp khoá - giá trị *(Working with Key-Value Pairs)*
 
