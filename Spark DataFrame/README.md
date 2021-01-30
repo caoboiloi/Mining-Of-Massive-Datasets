@@ -10,6 +10,14 @@ Dataframe thường đề cập đến một cấu trúc dữ liệu, có bản 
 
 ![spark_dataframes_define_2](../Image/spark_dataframes_define_2.png)
 
+# ĐẶC ĐIỂM DATAFRAME
+
+![features_spark_dataframe](../Image/features_spark_dataframe.png)
+
+* Các khung dữ liệu được phân phối trong tự nhiên, điều này làm cho nó có khả năng chịu lỗi và cấu trúc dữ liệu có sẵn cao.
+* Đánh giá lười biếng là một chiến lược đánh giá giữ việc đánh giá một biểu thức cho đến khi giá trị của nó là cần thiết. Nó tránh đánh giá lặp lại. Đánh giá lười biếng trong Spark có nghĩa là quá trình thực thi sẽ không bắt đầu cho đến khi một hành động được kích hoạt. Trong Spark, bức tranh về sự lười biếng xuất hiện khi các phép biến đổi Spark xảy ra.
+* Dataframe có bản chất là Bất biến . Không thay đổi được, ý tôi là nó là một đối tượng có trạng thái không thể sửa đổi sau khi nó được tạo. Nhưng chúng ta có thể biến đổi các giá trị của nó bằng cách áp dụng một phép biến đổi nhất định , như trong RDD.
+
 # DATAFRAME CREATION
 
 ## sử dụng *createDataFrame()*
