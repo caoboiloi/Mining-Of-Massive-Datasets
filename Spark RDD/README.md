@@ -158,6 +158,10 @@ Một số RDD actions:
 * Checkpointing cũng tương tự như cache, chỉ khác nhau là lưu trữ vào đĩa cứng và không dùng được trong API của DataFrame
 * Cần sử dụng nhiều để tối ưu tính toán.
 
+## Google Colab
+
+Link Google Colab ví dụ: Link Google Colab ví dụ: https://colab.research.google.com/drive/1SLXlpPa2qJqnLuiJ5OxNc7dsvRbnEtbM?usp=sharing
+
 # TÀI LIỆU THAM KHẢO
 
 * https://laptrinh.vn/books/apache-spark/page/apache-spark-rdd
