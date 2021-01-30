@@ -94,11 +94,11 @@ DataFrame có một bộ API phong phú hỗ trợ đọc và ghi một số đ�
 
 # VÍ DỤ CỤ THỂ VIỆC SỬ DỤNG DATAFRAME LOAD DATA TỪ 1 FILE CSV
 
-Link Google Colab ví dụ: https://colab.research.google.com/drive/1SLXlpPa2qJqnLuiJ5OxNc7dsvRbnEtbM?usp=sharing
+<div align="left">Link Google Colab ví dụ: https://colab.research.google.com/drive/1SLXlpPa2qJqnLuiJ5OxNc7dsvRbnEtbM?usp=sharing</div>
 
 ## Đọc dữ liệu từ tệp CSV
 
-Link file dataset: https://www.kaggle.com/hverified/web-scraped-data-of-fifa-world-cup-2018-players
+<div align="left">Link file dataset: https://www.kaggle.com/hverified/web-scraped-data-of-fifa-world-cup-2018-players</div>
 
 ```python
 import pyspark
@@ -241,7 +241,6 @@ Ngoài những cách trên, còn nhiều cách có thể đào tạo dữ liệu
 * Lọc dữ liệu (Nhiều tham số)
 * Sắp xếp dữ liệu (OrderBy),...
 
-<div align="left">Link Google Colab ví dụ: https://colab.research.google.com/drive/1SLXlpPa2qJqnLuiJ5OxNc7dsvRbnEtbM?usp=sharing</div>
 # TÀI LIỆU THAM KHẢO
 
 * https://codetudau.com/xu-ly-du-lieu-voi-spark-dataframe/index.html
