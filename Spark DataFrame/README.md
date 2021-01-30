@@ -169,6 +169,69 @@ result:
 736
 8
 ```
+
+Nếu chúng ta muốn xem tóm tắt của bất kỳ cột cụ thể nào trong Dataframe, chúng ta sử dụng phương pháp mô tả. Phương pháp này cung cấp cho chúng ta tóm tắt thống kê của cột nhất định, nếu không được chỉ định, nó cung cấp tóm tắt thống kê của khung dữ liệu.
+
+```python
+df.describe('Country').show()
+df.describe('Age').show()
+```
+result:
+```note
++-------+---------+
+|summary|  Country|
++-------+---------+
+|  count|      734|
+|   mean|     null|
+| stddev|     null|
+|    min|Argentina|
+|    max|  Uruguay|
++-------+---------+
+
++-------+-----------------+
+|summary|              Age|
++-------+-----------------+
+|  count|              734|
+|   mean|28.11035422343324|
+| stddev|3.947137271972592|
+|    min|               20|
+|    max|               46|
++-------+-----------------+
+```
+
+Nếu chúng ta muốn chọn các cột cụ thể từ khung dữ liệu, chúng ta sử dụng phương pháp select.
+
+```python
+df.select('Name','International Caps').show()
+```
+result:
+```note
++-------------------+------------------+
+|               Name|International Caps|
++-------------------+------------------+
+|      Pedro GALLESE|                42|
+|  Alberto RODRIGUEZ|                75|
+|         Aldo CORZO|                24|
+|Anderson SANTAMARIA|                 8|
+|      Miguel ARAUJO|                 8|
+|      Miguel TRAUCO|                29|
+|      Paolo HURTADO|                34|
+|    Christian CUEVA|                48|
+|     Paolo GUERRERO|                92|
+|   Jefferson FARFAN|                86|
+|       Raul RUIDIAZ|                32|
+|      Carlos CACEDA|                 6|
+|       Renato TAPIA|                33|
+|          Andy POLO|                17|
+|    Christian RAMOS|                73|
+|   Wilder CARTAGENA|                 4|
+|     Luis ADVINCULA|                68|
+|     Andre CARRILLO|                49|
+|     Yoshimar YOTUN|                76|
+|      Edison FLORES|                32|
++-------------------+------------------+
+only showing top 20 rows
+```
 # TÀI LIỆU THAM KHẢO
 
 * https://codetudau.com/xu-ly-du-lieu-voi-spark-dataframe/index.html
