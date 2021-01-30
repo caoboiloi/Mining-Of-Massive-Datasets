@@ -241,7 +241,7 @@ Ngoài những cách trên, còn nhiều cách có thể đào tạo dữ liệu
 * Lọc dữ liệu (Nhiều tham số)
 * Sắp xếp dữ liệu (OrderBy),...
 
-Link colab ví dụ: https://colab.research.google.com/drive/1SLXlpPa2qJqnLuiJ5OxNc7dsvRbnEtbM#scrollTo=5C_raOAY2vEW
+<div align="left">Link Google Colab ví dụ: https://colab.research.google.com/drive/1SLXlpPa2qJqnLuiJ5OxNc7dsvRbnEtbM?usp=sharing</div>
 # TÀI LIỆU THAM KHẢO
 
 * https://codetudau.com/xu-ly-du-lieu-voi-spark-dataframe/index.html

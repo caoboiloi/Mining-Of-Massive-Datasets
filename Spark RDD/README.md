@@ -160,7 +160,7 @@ Một số RDD actions:
 
 ## Google Colab
 
-Link Google Colab ví dụ: https://colab.research.google.com/drive/1SLXlpPa2qJqnLuiJ5OxNc7dsvRbnEtbM?usp=sharing
+<div align="left">Link Google Colab ví dụ: https://colab.research.google.com/drive/1SLXlpPa2qJqnLuiJ5OxNc7dsvRbnEtbM?usp=sharing</div>
 
 # TÀI LIỆU THAM KHẢO
 
