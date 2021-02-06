@@ -28,7 +28,7 @@ Dữ liệu có thể được tải vào thông qua tệp CSV, JSON, XML hoặc
 
 ## sử dụng *createDataFrame()*
 
-Bằng cách sử dụng createDataFrame()chức năng của SparkSession, bạn có thể tạo một DataFrame:
+Bằng cách sử dụng createDataFrame() chức năng của SparkSession, bạn có thể tạo một DataFrame:
 
 ```python
 import pyspark
