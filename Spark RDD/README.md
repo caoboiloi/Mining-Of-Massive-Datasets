@@ -91,7 +91,7 @@ Spark cung cấp các hoạt động đặc biệt trên RDD có chứa các c�
 
 Ví dụ: cặp RDD có một phương thức reduceByKey() có thể tổng hợp dữ liệu riêng biệt cho từng khóa và một phương thức join() có thể hợp nhất hai RDD với nhau bằng cách nhóm các phần tử có cùng một khóa. Thông thường, trích xuất các trường từ RDD (ví dụ: đại diện cho thời gian sự kiện, ID khách hàng hoặc số nhận dạng khác) và sử dụng các trường đó làm khóa trong các phép toán RDD theo cặp.
 
-Ví dụ 2: Cộng các khoá trong cặp khoá - giá trị nếu giá trị của từng cặp giống nhau
+Ví dụ 2: Cộng các giá trị trong cặp khoá - giá trị nếu khoá của từng cặp giống nhau
 ```python
 import pyspark
 from pyspark import SparkConf, SparkContext
