@@ -92,7 +92,7 @@ Output Writer
 
 # TỔNG QUAN VỀ APACHE SPARK
 
-![Apache Spark](./Image/Apache_spark_review.jpg)
+![Apache Spark](Image/Apache_spark_review.jpg)
 
 Ngày nay có rất nhiều hệ thống xử lý dữ liệu thông tin đang sử dụng Hadoop rộng rãi để phân tích dữ liệu lớn. Ưu điểm lớn nhất của Hadoop là được dựa trên một mô hình lập trình song song với xử lý dữ liệu lớn là MapReduce, mô hình này cho phép khả năng tính toán có thể mở rộng, linh hoạt, khả năng chịu lỗi, chi phí rẻ. Điều này cho phép tăng tốc thời gian xử lý các dữ liệu lớn nhằm duy trì tốc độ, giảm thời gian chờ đợi khi dữ liệu ngày càng lớn.
 
@@ -134,7 +134,7 @@ Apache Spark gồm có 5 thành phần chính : Spark Core, Spark Streaming, Spa
 
 ### Tính năng, ưu nhược điểm của Spark:
 
-![Apache Spark](./Image/Spark_uu_nhuoc.jpg)
+![Apache Spark](Image/Spark_uu_nhuoc.jpg)
 
 *Tính năng và cũng là ưu điểm của Spark:*
 
@@ -180,7 +180,7 @@ Những use case tiêu biểu khác có thể liệt kê như các công ty côn
 
 ### Spark Application
 
-![Apache Spark](./Image/Spark_application.jpg)
+![Apache Spark](Image/Spark_application.jpg)
 
 Một ứng dụng Spark sẽ gồm 2 thành phần chính:
 
@@ -194,7 +194,7 @@ Khi chạy, từ logic của chương trình (chính là code xử lý thông qu
 
 ### RDD (Resilient Distributed Dataset):
 
-![RDD](Spark_rdd.jpg)
+![RDD](Image/Spark_rdd.jpg)
 
 Trong 1 chương trình Spark, RDD là đại diện cho tập dữ liệu phân tán.
 
@@ -227,7 +227,7 @@ Sau tất cả các phép biến đổi, khi muốn tương tác với kết qu�
 
 Khi thực thi, việc gọi các transformations, Spark sẽ không ngay lập tức thực thi các tính toán mà sẽ lưu lại thành 1 lineage, tức là tập hợp các biến đổi từ RDD này thành RDD khác qua mỗi transformation. Khi có 1 action được gọi, Spark lúc này mới thực sự thực hiện các biến đổi để trả ra kết quả.
 
-![Lazy evaluation](./Image/Spark_lazy_evaluation.jpg)
+![Lazy evaluation](Image/Spark_lazy_evaluation.jpg)
 
 # TÀI LIỆU THAM KHẢO
 
