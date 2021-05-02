@@ -16,3 +16,9 @@ Bài toán tìm kiếm văn bản tương tự trong tập dữ liệu bằng ph
 * Min-Hashing
 * Locality sensitive Hashing
 
+# DATASET
+
+Dữ liệu là các bài báo được Crawl từ trang các Báo điện tử lớn ở Việt Nam:
+* [Vn Express](https://vnexpress.net/)
+* [Vietnam.net](https://vietnamnet.vn/)
+* [Thanh niên](https://thanhnien.vn/)
