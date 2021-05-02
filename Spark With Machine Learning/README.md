@@ -1,3 +1,3 @@
 # SPARK VỚI HỌC MÁY (MACHINE LEARNING)
 
-## BÀI TOÁN ĐẶT RA: TÌM TẤT CẢ CÁC ITEM GẦN NHẤT VỚI MỘT ITEAM ĐÃ CHO THÔNG QUA KHOẢNG CÁCH EUCLID (EUCLIDEAN DISTANCE)
+## BÀI TOÁN: DỰ ĐOÁN NGƯỜI DÙNG CÓ GỬI MỘT KHOẢNG TIỀN GỬI CÓ KỲ HẠN CHO NGÂN HÀNG HAY KHÔNG - [BANK DATASET](https://github.com/caoboiloi/Mining-Of-Massive-Datasets/blob/main/Spark%20-%20LSH%20(Locality-Sensitive%20Hashing)/report.docx)
