@@ -35,7 +35,7 @@ Thuật toán Apriori được công bố bởi R. Agrawal và R. Srikant vào n
 
 * Tập k-hạng mục (k-itemset): ví dụ danh sách sản phẩm (1-itemset) như {A, B, C}, danh sách cặp sản phẩm đi kèm (2-itemset) như {{A, B}, {A, C}}, danh sách 3 sản phẩm đi kèm (3-itemset) như {{A, B, C}, {B, C, E}}.
 
-* Độ phổ biến (support): được tính bằng supp(X) = \frac{count(X)}{|D|}. X = {B, C} là tập các hạng mục, D là cơ sở dữ liệu (CSDL) giao dịch.
+* Độ phổ biến (support): được tính bằng supp(X) = frq(X)/D. Với X = {B, C} là tập các hạng mục (B giao với C), D là cơ sở dữ liệu (CSDL) giao dịch.
 
 * Tập phổ biến (frequent itemset): là tập các hạng mục S (itemset) thỏa mãn độ phổ biến tối thiểu (minsupp – do người dùng xác định như 40% hoặc xuất hiện 5 lần). Nếu supp(S) >= minsupp thì S là tập phổ biến.
 
@@ -45,7 +45,7 @@ Thuật toán Apriori được công bố bởi R. Agrawal và R. Srikant vào n
 
 * Luật kết hợp (association rule): kí hiệu X => Y, nghĩa là khi X có mặt thì Y cũng có mặt (với xác suất nào đó). Ví dụ, A => B; A,B => C; B,D => E.
 
-* Độ tin cậy (confidence): được tính bằng conf(X) = \frac{supp(X+Y)}{supp(X)}.
+* Độ tin cậy (confidence): được tính bằng conf(X) = supp(X,Y)/supp(X).
 
 ![SparkApriori](../Image/Spark_Apriori_2.png)
 
