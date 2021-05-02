@@ -1,3 +1,5 @@
+<div align="justify">
+
 # GIỚI THIỆU VỀ THUẬT TOÁN APRIORI
 
 Bài toán khai thác tập phổ biến (frequent itemset) là bài toán rất quan trọng trong lĩnh vực data mining. Bài toán khai thác tập phổ biến là bài toán tìm tất cả tập các hạng mục (itemset) S có độ phổ biến (support) thỏa mãn độ phổ biến tối thiểu minsupp.
@@ -33,3 +35,5 @@ Thuật toán Apriori được công bố bởi R. Agrawal và R. Srikant vào n
 * Luật kết hợp (association rule): kí hiệu X \rightarrow Y, nghĩa là khi X có mặt thì Y cũng có mặt (với xác suất nào đó). Ví dụ, A \rightarrow B; A,B \rightarrow C; B,D \rightarrow E.
 
 * Độ tin cậy (confidence): được tính bằng conf(X) = \frac{supp(X+Y)}{supp(X)}.
+
+</div>
