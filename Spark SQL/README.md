@@ -88,6 +88,14 @@ Import org.apache.spark.sql.functions
 
 ### Nhược điểm của Spark SQL
 
+* **Loại liên minh không hỗ trợ**: Sử dụng Spark SQL, chúng ta không thể tạo hoặc đọc bảng chứa các trường kết hợp.
+
+* **Không hỗ trợ cho bảng giao dịch**: Giao dịch Hive không được Spark SQL hỗ trợ.
+
+* **Type *Char* không được hỗ trợ**: Type Char không được hỗ trợ. Giống như liên minh, chúng ta không thể đọc hoặc tạo bảng với các trường như vậy.
+
+* **Không có lỗi cho quá khổ của Type *Varchar***: Ngay cả khi giá trị được chèn vượt quá giới hạn kích thước, sẽ không có lỗi xảy ra. Dữ liệu tương tự sẽ bị cắt bớt nếu đọc từ Hive nhưng không được đọc từ Spark. SparkQuery sẽ coi varchar là một chuỗi, có nghĩa là không có giới hạn kích thước.
+
 # TÀI LIỆU THAM KHẢO
 
 * https://helpex.vn/article/spark-sql-huong-dan-gioi-thieu-5c6b25a6ae03f628d053c3e8#:~:text=Apache%20Spark%20SQL%20l%C3%A0%20m%E1%BB%99t,h%C3%B3a%20th%C3%AAm%20trong%20Apache%20Spark.
