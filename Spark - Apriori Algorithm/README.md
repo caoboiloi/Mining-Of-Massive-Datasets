@@ -12,8 +12,19 @@ Thuật toán Apriori được công bố bởi R. Agrawal và R. Srikant vào n
 
 ### Các khái niệm cơ bản
 
-Để minh họa cho các khái niệm, ta lấy ví dụ CSDL với các giao dịch sau. | TID (mã giao dịch) | Itemset (tập các hạng mục) | 1 | A, B, E 2 | B, D 3 | B, C 4 | A, B, D 5 | A, C 6 | B, C 7 | A, C 8 | A, B, C, E 9 | A, B, C
-
+Để minh họa cho các khái niệm, ta lấy ví dụ CSDL với các giao dịch sau. 
+```note
+| TID (mã giao dịch) | Itemset (tập các hạng mục) |
+| 1 | A, B, E |
+| 2 | B, D |
+| 3 | B, C |
+| 4 | A, B, D |
+| 5 | A, C |
+| 6 | B, C |
+| 7 | A, C |
+| 8 | A, B, C, E |
+| 9 | A, B, C |
+```
 * Hạng mục (item): mặt hàng A = apple, B = bread, C = cereal, D = donuts, E = eggs.
 
 * Tập các hạng mục (itemset): danh sách các hạng mục trong giỏ hàng như {A, B, C, D, E}.
