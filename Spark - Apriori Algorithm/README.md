@@ -119,4 +119,15 @@ def checkItemSets(item_1 , item_2):
     return all(any(k == l for k in item_2 ) for l in item_1)
 ```
 
+### Đọc và xử lý dữ liệu
+
+```python
+text_file = sc.textFile("drive/MyDrive/BIGDATA/Week3/Apriori/store_data.csv")
+# Print in the first of the file
+print(text_file.first())
+```
+```note
+shrimp,almonds,avocado,vegetables mix,green grapes,whole weat flour,yams,cottage cheese,energy drink,tomato juice,low fat yogurt,green tea,honey,salad,mineral water,salmon,antioxydant juice,frozen smoothie,spinach,olive oil
+```
+
 </div>
