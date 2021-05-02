@@ -23,4 +23,13 @@ Sử dụng SQL, chúng ta có thể truy vấn dữ liệu, cả từ bên tron
 
 * Khi SQL chạy từ ngôn ngữ lập trình khác, kết quả sẽ là Bộ dữ liệu / Khung dữ liệu. Sự tương tác với giao diện SQL được thực hiện bằng cách sử dụng dòng lệnh hoặc qua JDBC / ODBC.
 
+## Data trong Spark SQL
+
+Có một số hạn chế với RDD là Khi làm việc với dữ liệu có cấu trúc, không có công cụ tối ưu hóa tích hợp. Trên cơ sở các thuộc tính, nhà phát triển phải tối ưu hóa từng RDD . Ngoài ra, không có quy định để xử lý dữ liệu có cấu trúc. DataFrame trong Spark SQL khắc phục những hạn chế này của RDD. Spark DataFrame là phiên bản Spark 1.3. Nó là một tập hợp phân phối dữ liệu được sắp xếp vào các cột được đặt tên. Khái niệm về Spark Dataframe có ở trong bài học trước - [Spark Dataframe](https://github.com/caoboiloi/Mining-Of-Massive-Datasets/tree/main/Spark%20DataFrame). Chúng ta có thể tạo DataFrame bằng cách sử dụng:
+
+* Tệp dữ liệu có cấu trúc
+
+* Cơ sở dữ liệu bên ngoài
+
+* Sử dụng RDD hiện có
 </div>
