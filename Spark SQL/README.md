@@ -49,4 +49,26 @@ Trình tối ưu hóa được Spark SQL sử dụng là trình tối ưu hóa C
 Trình tối ưu hóa giúp chúng ta chạy các truy vấn nhanh hơn nhiều so với đối tác RDD của chúng. Điều này làm tăng hiệu suất của hệ thống.
 
 Spark Catalyst là một thư viện được xây dựng như một hệ thống dựa trên quy tắc. Và mỗi quy tắc tập trung vào việc tối ưu hóa cụ thể. Ví dụ: **ConstantFolding** trọng tâm của việc là loại bỏ một  biểu thức không đổi khỏi truy vấn.
+
+### Công dụng của Apache Spark SQL
+
+* Nó thực thi các truy vấn SQL.
+
+* Chúng ta có thể đọc dữ liệu từ các bản cài đặt hiện có bằng SparkQuery.
+
+* Khi chúng ta chạy SQL trong một ngôn ngữ lập trình khác, chúng ta sẽ nhận được kết quả dưới dạng Bộ dữ liệu / Khung dữ liệu (*Dataframe*).
+
+### Các hàm được xác định bởi Spark SQL
+
+* Hàm dựng sẵn: Cung cấp hàm dựng sẵn để xử lý giá trị cột. Chúng ta có thể truy cập hàm inbuilt bằng cách sử dụng lệnh sau:
+
+```python
+Import org.apache.spark.sql.functions
+```
+
+* Hàm do người dùng xác định (UDF): UDF cho phép bạn tạo các hàm định nghĩa người dùng dựa trên các hàm do người dùng xác định trong Scala.
+
+* Hàm tổng hợp: Chúng hoạt động trên một nhóm hàng và tính một giá trị trả về duy nhất cho mỗi nhóm.
+
+* Windowed Aggregates (Windows): Chúng hoạt động trên một nhóm các hàng và tính toán một giá trị trả về duy nhất cho mỗi hàng trong một nhóm.
 </div>
