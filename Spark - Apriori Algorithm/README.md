@@ -47,4 +47,6 @@ Thuật toán Apriori được công bố bởi R. Agrawal và R. Srikant vào n
 
 * Độ tin cậy (confidence): được tính bằng conf(X) = \frac{supp(X+Y)}{supp(X)}.
 
+![SparkApriori](../Image/Spark_Apriori_2.jpg)
+
 </div>
