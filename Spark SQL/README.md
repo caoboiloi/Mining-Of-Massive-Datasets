@@ -40,7 +40,7 @@ Spark Dataset là một giao diện được thêm vào trong phiên bản Spark
 
 Một bộ dữ liệu có thể được tạo bằng các đối tượng JVM và sau đó, nó có thể được xử lý bằng các phép biến đổi chức năng (ánh xạ, bộ lọc, v.v.). API Dataset có thể truy cập inScala và Java. API Dataset không được Python hỗ trợ, nhưng do tính chất động của Python, nhiều lợi ích của API Dataset có sẵn. Trường hợp tương tự với R. Sử dụng Bộ dữ liệu của các hàng chúng ta biểu thị DataFrame trong Scala và Java.
 
-# CÁC LỢI ÍCH, ƯU VÀ NHƯỢC ĐIỂM TRONG SPARK SQL
+# CÁC LỢI ÍCH, ƯU ĐIỂM VÀ NHƯỢC ĐIỂM TRONG SPARK SQL
 
 ### Tối ưu hóa chất xúc tác Spark
 
