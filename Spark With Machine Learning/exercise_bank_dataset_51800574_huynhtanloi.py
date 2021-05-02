@@ -54,7 +54,7 @@ df_r = df_r.drop(df_r.deposit_index)
 
 from pyspark.ml.feature import VectorAssembler
 
-eature_names = df_r.columns[17:]
+feature_names = df_r.columns[17:]
 print(feature_names)
 assembler = VectorAssembler()
 assembler.setInputCols(feature_names).setOutputCol('features')
