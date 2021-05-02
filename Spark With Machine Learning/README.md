@@ -114,7 +114,7 @@ Sau khi chuyển các features thành các number, gom chúng lại thành 1 Arr
 df_r = df_r.drop(df_r.deposit_index)
 ```
 
-Dùng VectorAssembler trong PySpark (***from pyspark.ml.feature import VectorAssembler***)
+Dùng VectorAssembler trong PySpark dể gom các features thành 1 array (***from pyspark.ml.feature import VectorAssembler***)
 ```python
 from pyspark.ml.feature import VectorAssembler
 
@@ -154,3 +154,41 @@ transformed_data.show()
 +---+-----------+--------+---------+-------+-------+-------+----+-------+---+-----+--------+--------+-----+--------+--------+-------+-----------+-------------+---------+-------------+--------------+--------------+--------------+-----------+-------------+-------------+--------------+---------+---------------+----------+-------------+---------+--------------------+
 only showing top 20 rows
 ```
+
+#### Bước 4: Áp dụng model training data
+
+Phân data thành 2 tập Train & Test với tỉ lệ 8:2
+```python
+[training_data, test_data] = transformed_data.randomSplit([0.8,0.2])
+training_data.toPandas()
+```
+Lấy cột label
+```python
+class_name = 'deposit'
+```
+
+Tạo model Logistic Regression
+```python
+from pyspark.ml.classification import LogisticRegression
+model = LogisticRegression(featuresCol = 'features',labelCol=class_name, maxIter=30)
+```
+Bỏ tập data training vào model để model học tập
+```python
+M = model.fit(training_data)
+```
+
+Kết quả Prediction với tập data testing
+```python
+predictions = M.transform(test_data)
+from pyspark.ml.evaluation import MulticlassClassificationEvaluator
+
+multi_evaluator = MulticlassClassificationEvaluator(labelCol = 'deposit', metricName = 'accuracy')
+print('Logistic Regression Accuracy:', multi_evaluator.evaluate(predictions))
+```
+
+Kết quả
+```note
+Logistic Regression Accuracy: 0.781408191440405
+```
+
+Độ chính xác sau khi Training và Testing ~~ 78%
