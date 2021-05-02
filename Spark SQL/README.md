@@ -71,4 +71,26 @@ Import org.apache.spark.sql.functions
 * Hàm tổng hợp: Chúng hoạt động trên một nhóm hàng và tính một giá trị trả về duy nhất cho mỗi nhóm.
 
 * Windowed Aggregates (Windows): Chúng hoạt động trên một nhóm các hàng và tính toán một giá trị trả về duy nhất cho mỗi hàng trong một nhóm.
+
+### Ưu điểm của Spark SQL
+
+* **Tích hợp**: Apache Spark SQL trộn các truy vấn SQL với các chương trình Spark. Với sự trợ giúp của Spark SQL, chúng ta có thể truy vấn dữ liệu có cấu trúc dưới dạng tập dữ liệu phân tán (RDD). Chúng ta có thể chạy các truy vấn SQL cùng với các thuật toán phân tích phức tạp bằng cách sử dụng thuộc tính tích hợp chặt chẽ của Spark SQL.
+
+* **Truy cập dữ liệu hợp nhất**: Trong Apache Spark SQL, chúng ta có thể chạy các truy vấn Hive chưa sửa đổi trên các kho hiện có. Nó cho phép tương thích hoàn toàn với dữ liệu Hive, truy vấn và UDF hiện có, bằng cách sử dụng giao diện Hive và MetaStore.
+
+* **Kết nối tiêu chuẩn**: Nó có thể kết nối thông qua JDBC hoặc ODBC. Nó bao gồm chế độ máy chủ với kết nối JDBC và ODBC tiêu chuẩn công nghiệp.
+
+* **Khả năng mở rộng**: Để hỗ trợ khả năng chịu lỗi truy vấn giữa và các công việc lớn, cần tận dụng mô hình RDD. Nó sử dụng cùng một công cụ cho các truy vấn tương tác và dài.
+
+* **Tối ưu hóa hiệu suất**: Công cụ tối ưu hóa truy vấn trong Spark SQL chuyển đổi từng truy vấn SQL thành một kế hoạch logic. Hơn nữa, nó chuyển đổi sang nhiều kế hoạch thực hiện vật lý. Trong toàn bộ kế hoạch, nó chọn phương án vật lý tối ưu nhất để thực hiện.
+
+* **Để xử lý hàng loạt các bảng Hive**: Chúng ta có thể sử dụng Spark SQL để xử lý hàng loạt các bảng Hive nhanh chóng.
+
+### Nhược điểm của Spark SQL
+
+# TÀI LIỆU THAM KHẢO
+
+* https://helpex.vn/article/spark-sql-huong-dan-gioi-thieu-5c6b25a6ae03f628d053c3e8#:~:text=Apache%20Spark%20SQL%20l%C3%A0%20m%E1%BB%99t,h%C3%B3a%20th%C3%AAm%20trong%20Apache%20Spark.
+* https://spark.apache.org/docs/latest/api/sql/index.html
+* https://streamsets.com/documentation/transformer/3.11.x/help/transformer/Processors/SparkSQLQuery.html
 </div>
