@@ -191,4 +191,4 @@ Kết quả
 Logistic Regression Accuracy: 0.781408191440405
 ```
 
-Độ chính xác sau khi Training và Testing ~~ 78%
+Độ chính xác sau khi Training và Testing là 78%
