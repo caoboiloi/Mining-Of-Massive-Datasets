@@ -160,7 +160,7 @@ Candidate 1: 120
 * Dùng các function đã tạo trước để tính ra support của từng C1 -> L1: là các C1 phù hợp với min_sup đã cho.
 * Sau khi tìm được tập L1 -> khởi tạo tập C2 (tập ứng cử viên tiếp theo gồm 2 phần tử) và cũng nhưC C1, ta tìm được L2 cho đến khi Ln là tập rỗng ta sẽ dừng lại thuật toán
 
-** *Chạy thuật toán: min_sup = 150 - min_confidence = 40%* **
+***Chạy thuật toán: min_sup = 150 - min_confidence = 40%***
 ```python
 min_sup = 150
 min_Confidence = 0.4
